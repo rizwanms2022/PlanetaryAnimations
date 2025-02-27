@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+    animation: forbody 15s infinite;
+    transition: background 20.1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Ensures the body takes up the full viewport height */
+    background: linear-gradient(135deg, #000000, #000000, #000000, #000000);
+}
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://cdn.pixabay.com/photo/2023/08/14/15/42/milkyway-8190232_1280.jpg') center/cover no-repeat;
+    z-index: -1;
+    filter: blur(0px);
+    opacity: 0.4;
+}
+.main-box{
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1.3);
+}
+.sun{
+    background: linear-gradient(
+        195deg,
+        #ffa726 0%,
+        #ff8c00 25%,
+        #ffd700 50%,
+        #f64121 75%,
+        #ff9d00 100%
+      );
+      transition-duration: 0s;
+        box-shadow: 0 0 60px 30px rgba(255, 140, 0, 0.5),
+          inset 0 0 20px 10px rgba(255, 215, 0, 0.5);
+        border: none;
+}
+.sun-child{
+background-color: rgba(0, 0, 0, 0);
+}
+.sun:hover{
+    transform: rotate(2000deg);
+    transition: 50s;
+}
+.sun:hover  .sun-child{
+    transform: rotate(-3060deg);
+    transition: 50s;
+}
+.sun:hover  .sun-child .child{
+    transform: rotate(-3060deg);
+    transition: 50s;
+}
+
+
+
+
+
+
+
+
+
+
+.mercury {
+    background: linear-gradient(135deg, #7b241c, #505050, #a0a0a0, #e0e0e0);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  }
+.venus {
+background: linear-gradient(135deg, #FFC300, #FF5733, #C70039, #900C3F);
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+.earth {
+background: linear-gradient(135deg, #0000FF, #007BFF, #00FF00, #007B00);
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+.mars {
+background: linear-gradient(135deg, #FF4500, #FF6347, #CD5C5C, #8B0000);
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+.jupiter {
+background: linear-gradient(135deg, #FFA500, #FF8C00, #FFD700, #DAA520);
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+.saturn {
+background: linear-gradient(135deg, #D2B48C, #FFE4B5, #CD853F, #884515);
+box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+}
+
+.ring-of-saturn{
+
+
+    box-shadow: 0 0 5px 13px rgba(231, 231, 231, 0.5),
+    inset 0 0 20px 10px rgba(241, 241, 241, 0.5);
+transform: rotate3d(1, 1, 1, 55deg);
+border: none;
+
+
+
+}
+.uranus {
+background: linear-gradient(135deg, #00FFFF, #40E0D0, #48D1CC, #20B2AA);
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+.guide-button {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    padding: 10px 20px;
+    background-color: #2e2d2d08;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bolder;
+    transition: 0.51s;
+    animation: button 2s infinite;
+}
+
+.guide-button:hover {
+    background-color: #1b1b1b;
+    transform: scale(1.1);
+}
+@keyframes button {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+    
+}
+
